@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Barranquilla Turismo - Guía para extranjeros</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Barranquilla Turismo</h1>
+      <p>Guía práctica para visitantes extranjeros: sitios, cómo llegar, precios y reservas.</p>
+      <div class="search-row">
+        <input id="search" placeholder="Buscar sitio, hotel o restaurante..." />
+        <select id="filter">
+          <option value="all">Todos</option>
+          <option value="atraccion">Atracciones</option>
+          <option value="hotel">Hotelería</option>
+          <option value="transporte">Transporte</option>
+          <option value="noche">Vida nocturna</option>
+          <option value="comida">Comida</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="info-visitante" class="card">
+      <h2>Información para extranjeros</h2>
+      <p>Bienvenido a Barranquilla. Aquí encontrarás recomendaciones de seguridad, requisitos básicos (pasaporte, vacunas según corresponda) y contactos útiles.</p>
+      <ul>
+        <li>Oficina de turismo: Calle 72 #52-20, teléfono: +57 5 1234567</li>
+        <li>Transporte desde aeropuerto: taxi autorizado y servicio de buses / app móviles.</li>
+      </ul>
+    </section>
+
+    <section id="listado" class="grid">
+      <!-- Cada tarjeta tiene data-type para filtrar -->
+
+      <!-- Atracción ejemplo -->
+      <article class="card sitio" data-name="Puerto Mocho" data-type="atraccion">
+        <h3>Puerto Mocho</h3>
+        <p class="meta">Dirección: Avenida del Río, Barranquilla</p>
+        <p>Cómo llegar: taxi 15–25 min desde el centro; referencia: cerca del Muelle.</p>
+        <p>Punto de referencia: Muelle Turístico</p>
+        <p>Precio: Entrada libre / paseo en bote COP 20.000 por persona (ejemplo)</p>
+        <p>Permite: Niños: Sí · Mascotas: No</p>
+        <div class="actions">
+          <button class="btn reserva" data-title="Puerto Mocho">Reservar paseo</button>
+          <button class="btn detalles">Ver más</button>
+        </div>
+        <div class="detalles oculto">
+          <p>Horario: 8:00–17:00. Servicios: baños, vendedores ambulantes, estacionamiento cercano.</p>
+        </div>
+      </article>
+
+      <!-- Malecom (Malecón) -->
+      <article class="card sitio" data-name="Malecom" data-type="atraccion">
+        <h3>Malecom</h3>
+        <p class="meta">Dirección: Malecón del Río</p>
+        <p>Cómo llegar: caminando desde el Centro, bus urbano rutas 10 y 12; referencia: a la vera del río Magdalena.</p>
+        <p>Precio: gratuito</p>
+        <p>Permite: Niños: Sí · Mascotas: Sí (con correa)</p>
+        <div class="actions">
+          <button class="btn reserva" data-title="Malecom">Reservar evento</button>
+          <button class="btn detalles">Ver más</button>
+        </div>
+        <div class="detalles oculto">
+          <p>Ideal para caminatas, eventos culturales y ver el atardecer.</p>
+        </div>
+      </article>
+
+      <!-- Zoológico ejemplo -->
+      <article class="card sitio" data-name="Zoológico" data-type="atraccion">
+        <h3>Zoológico de Barranquilla</h3>
+        <p class="meta">Dirección: Carrera 5 con Calle 20</p>
+        <p>Cómo llegar: taxi o bus; referencia: cercano al Estadio Metropolitano.</p>
+        <p>Precio: Adultos COP 25.000 · Niños COP 10.000 (ejemplo)</p>
+        <p>Permite: Niños: Sí · Mascotas: No</p>
+        <div class="actions">
+          <button class="btn reserva" data-title="Zoológico de Barranquilla">Comprar entradas</button>
+          <button class="btn detalles">Ver más</button>
+        </div>
+        <div class="detalles oculto">
+          <p>Horario: 9:00–16:00, cerrado los lunes.</p>
+        </div>
+      </article>
+
+      <!-- Playa Puerto Colombia -->
+      <article class="card sitio" data-name="Playa Puerto Colombia" data-type="atraccion">
+        <h3>Playa Puerto Colombia</h3>
+        <p class="meta">Dirección: Puerto Colombia, Atlántico (cercano a Barranquilla)</p>
+        <p>Cómo llegar: en bus o carro particular por la Vía al Mar; referencia: el viejo muelle histórico.</p>
+        <p>Precio: gratuito / servicios pagos</p>
+        <p>Permite: Niños: Sí · Mascotas: Sí (según zona)</p>
+        <div class="actions">
+          <button class="btn reserva" data-title="Playa Puerto Colombia">Reservar tour</button>
+          <button class="btn detalles">Ver más</button>
+        </div>
+        <div class="detalles oculto">
+          <p>Servicios: quioscos, salvavidas en temporada alta, estacionamiento.</p>
+        </div>
+      </article>
+
+      <!-- Hotelería ejemplo -->
+      <article class="card sitio" data-name="Hotel Caribe" data-type="hotel">
+        <h3>Hotel Caribe</h3>
+        <p class="meta">Dirección: Calle 84 #53-20</p>
+        <p>Cómo llegar: taxi 10 min desde el aeropuerto. Reserva: teléfono +57 5 7654321</p>
+        <p>Precios: Habitación doble desde COP 180.000 / noche (ejemplo)</p>
+        <p>Permite: Niños: Sí · Mascotas: Consultar</p>
+        <div class="actions">
+          <button class="btn reserva" data-title="Hotel Caribe">Reservar habitación</button>
+          <button class="btn detalles">Ver más</button>
+        </div>
+        <div class="detalles oculto">
+          <p>Servicios: Wi-Fi, desayuno incluido, piscina.</p>
+        </div>
+      </article>
+
+      <!-- Transporte -->
+      <article class="card sitio" data-name="Taxi autorizado" data-type="transporte">
+        <h3>Taxi autorizado</h3>
+        <p class="meta">Cómo llegar: disponible en aeropuerto y puntos oficiales</p>
+        <p>Tarifa aproximada: COP 35.000–60.000 al centro (dependiendo de tráfico)</p>
+        <p>Reserva: App de taxis o punto oficial del aeropuerto.</p>
+      </article>
+
+      <!-- Vida nocturna -->
+      <article class="card sitio" data-name="La Troja" data-type="noche">
+        <h3>La Troja</h3>
+        <p class="meta">Dirección: Av. Carrera 46 (ejemplo)</p>
+        <p>Cómo llegar: taxi; referencia: cerca del barrio El Prado</p>
+        <p>Precio: Entrada variable, bebidas desde COP 15.000</p>
+        <p>Permite: Niños: No · Mascotas: No</p>
+        <div class="actions">
+          <button class="btn reserva" data-title="La Troja">Reservar mesa</button>
+          <button class="btn detalles">Ver más</button>
+        </div>
+        <div class="detalles oculto">
+          <p>Horario: 20:00–03:00. Música en vivo y baile.</p>
+        </div>
+      </article>
+
+      <!-- Restaurantes y comida rápida -->
+      <article class="card sitio" data-name="Kilimanjaro" data-type="comida">
+        <h3>Kilimanjaro</h3>
+        <p class="meta">Dirección: Carrera 60 #80-75 (ejemplo)</p>
+        <p>Cómo llegar: taxi o bus urbano</p>
+        <p>Especialidad: Comida africana / internacional. Precio promedio: COP 40.000 por persona</p>
+        <p>Permite: Niños: Sí · Mascotas: No</p>
+        <div class="actions">
+          <button class="btn reserva" data-title="Kilimanjaro">Hacer reserva</button>
+          <button class="btn detalles">Ver más</button>
+        </div>
+        <div class="detalles oculto">
+          <p>Opciones vegetarianas disponibles. Horario: 12:00–23:00.</p>
+        </div>
+      </article>
+
+    </section>
+
+    <section id="mapa" class="card">
+      <h2>Mapa y direcciones</h2>
+      <p>Incrusta aquí un mapa (Google Maps / OpenStreetMap). Si vas a subir a producción, reemplaza el iframe por tu API key y ubicaciones reales.</p>
+      <div class="map-placeholder">[Mapa interactivo - colocar iframe de Google Maps u OpenStreetMap]</div>
+    </section>
+
+  </main>
+
+  <!-- Modal de reserva simple -->
+  <div id="modal" class="modal oculto">
+    <div class="modal-contenido">
+      <button id="cerrar" class="btn cerrar">×</button>
+      <h3 id="modal-title">Reservar</h3>
+      <form id="form-reserva">
+        <label>Nombre del visitante
+          <input id="nombre" required />
+        </label>
+        <label>Correo electrónico
+          <input id="email" type="email" required />
+        </label>
+        <label>Fecha
+          <input id="fecha" type="date" required />
+        </label>
+        <label>Personas
+          <input id="personas" type="number" min="1" value="1" required />
+        </label>
+        <label>Comentarios / items especiales
+          <textarea id="comentarios" placeholder="Niños, mascotas, accesibilidad..."></textarea>
+        </label>
+        <div class="modal-actions">
+          <button type="submit" class="btn">Enviar reserva</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Datos de ejemplo. Verifica direcciones, precios y horarios antes de publicar.</p>
+      <p>Creado para trabajo final - Teoría General de Sistemas (TGS).</p>
+    </div>
+  </footer>
+
+  <script>
+    // Funcionalidad básica: búsqueda, filtro, abrir modal de reserva y toggles
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const search = document.getElementById('search');
+      const filter = document.getElementById('filter');
+      const sitios = Array.from(document.querySelectorAll('.sitio'));
+
+      function aplicarFiltro(){
+        const q = search.value.toLowerCase();
+        const tipo = filter.value;
+        sitios.forEach(s =>{
+          const name = s.dataset.name.toLowerCase();
+          const matchesQ = !q || name.includes(q);
+          const matchesTipo = tipo === 'all' || s.dataset.type === tipo;
+          s.style.display = (matchesQ && matchesTipo) ? '' : 'none';
+        });
+      }
+
+      search.addEventListener('input', aplicarFiltro);
+      filter.addEventListener('change', aplicarFiltro);
+
+      // Detalles toggle
+      document.querySelectorAll('.btn.detalles').forEach(btn=>{
+        btn.addEventListener('click', e=>{
+          const card = e.target.closest('.card');
+          const det = card.querySelector('.detalles');
+          det.classList.toggle('oculto');
+        });
+      });
+
+      // Modal reserva
+      const modal = document.getElementById('modal');
+      const modalTitle = document.getElementById('modal-title');
+      document.querySelectorAll('.btn.reserva').forEach(b=>{
+        b.addEventListener('click', e=>{
+          modal.classList.remove('oculto');
+          modalTitle.textContent = 'Reservar: ' + (e.target.dataset.title || 'Servicio');
+        });
+      });
+      document.getElementById('cerrar').addEventListener('click', ()=> modal.classList.add('oculto'));
+
+      document.getElementById('form-reserva').addEventListener('submit', e=>{
+        e.preventDefault();
+        // Aquí podrías enviar la info a un servidor. Ahora sólo mostramos un mensaje.
+        alert('Reserva enviada. Verifica correo para confirmación (simulado).');
+        modal.classList.add('oculto');
+        e.target.reset();
+      });
+
+    });
+  </script>
+</body>
+</html>

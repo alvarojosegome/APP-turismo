@@ -1,0 +1,171 @@
+:root{
+    --bg:#f7f7f9;
+    --card:#ffffff;
+    --accent:#0077b6;
+    --muted:#666;
+  }
+  
+  *{
+    box-sizing:border-box;
+  }
+  
+  body{
+    font-family: Inter, system-ui, Arial, sans-serif;
+    margin:0;
+    background:var(--bg);
+    color:#111;
+  }
+  
+  .container{
+    max-width:1100px;
+    margin:0 auto;
+    padding:20px;
+  }
+  
+  .site-header{
+    background:linear-gradient(90deg,#023e8a,#0077b6);
+    color:white;
+    padding:28px 0;
+  }
+  
+  .site-header h1{
+    margin:0 0 6px;
+  }
+  
+  .site-header p{
+    margin:0 0 12px;
+    opacity:0.95;
+  }
+  
+  .search-row{
+    display:flex;
+    gap:10px;
+    margin-top:10px;
+  }
+  
+  .search-row input,
+  .search-row select{
+    padding:10px;
+    border-radius:6px;
+    border:0;
+    min-width:0;
+  }
+  
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+    gap:18px;
+  }
+  
+  .card{
+    background:var(--card);
+    padding:16px;
+    border-radius:10px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.06);
+  }
+  
+  .card h3{
+    margin-top:0;
+  }
+  
+  .meta{
+    font-size:0.9rem;
+    color:var(--muted);
+  }
+  
+  .actions{
+    display:flex;
+    gap:8px;
+    margin-top:10px;
+  }
+  
+  .btn{
+    background:var(--accent);
+    color:white;
+    border:0;
+    padding:8px 12px;
+    border-radius:8px;
+    cursor:pointer;
+  }
+  
+  .btn.cerrar{
+    background:transparent;
+    color:#111;
+    font-size:1.2rem;
+    border-radius:50%;
+  }
+  
+  .btn.reserva{
+    background:#006494;
+  }
+  
+  .detalles{
+    margin-top:10px;
+  }
+  
+  .oculto{
+    display:none;
+  }
+  
+  .map-placeholder{
+    height:220px;
+    border-radius:8px;
+    background:linear-gradient(90deg,#e6eef7,#f7f9fc);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--muted);
+  }
+  
+  .site-footer{
+    padding:16px 0;
+    text-align:center;
+    color:var(--muted);
+  }
+  
+  .modal{
+    position:fixed;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(0,0,0,0.35);
+    z-index:200;
+  }
+  
+  .modal-contenido{
+    background:white;
+    padding:18px;
+    border-radius:12px;
+    width:90%;
+    max-width:520px;
+    position:relative;
+  }
+  
+  .modal form label{
+    display:block;
+    margin-bottom:8px;
+    font-size:0.95rem;
+  }
+  
+  .modal form input,
+  .modal form textarea{
+    width:100%;
+    padding:8px;
+    margin-top:6px;
+    border-radius:6px;
+    border:1px solid #ddd;
+  }
+  
+  .modal-actions{
+    display:flex;
+    justify-content:flex-end;
+    margin-top:12px;
+  }
+  
+  @media (max-width:600px){
+    .search-row{
+      flex-direction:column;
+    }
+  }
+  
