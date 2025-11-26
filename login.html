@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inicio de Sección Animado</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: #007bff;
+        background: url('TU_FONDO_GENERAL_AQUI') center/cover no-repeat fixed;
+        backdrop-filter: blur(2px);}
+
+    .section-header {
+        position: relative;
+        padding: 80px 20px;
+        text-align: center;
+        color: #eff0f1;
+        overflow: hidden;
+        background: url('turismo.jpg') center/cover no-repeat;
+        animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .section-header h1 {
+        font-size: 3rem;
+        margin: 0;
+        animation: moveUp 1.5s ease forwards;
+        opacity: 0;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    @keyframes moveUp {
+        0% { transform: translateY(40px); opacity: 0; }
+        100% { transform: translateY(0); opacity: 1; }
+    }
+
+  
+    .bubble {
+        position: absolute;
+        bottom: -100px;
+        background: rgba(255, 255, 255, 0.25);
+        border-radius: 50%;
+        animation: rise 10s infinite ease-in;
+    }
+
+    @keyframes rise {
+        from {
+            transform: translateY(0) scale(1);
+            opacity: 0.5;
+        }
+        to {
+            transform: translateY(-800px) scale(1.5);
+            opacity: 0;
+        }
+    }
+
+    input[type="text"], input[type="password"] {
+        padding: 10px;
+        width: 250px;
+        border: none;
+        border-radius: 8px;
+        margin-top: 5px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    input[type="text"]:focus, input[type="password"]:focus {
+        transform: scale(1.03);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+        outline: none;
+    }
+
+    button {
+        padding: 12px 25px;
+        background: linear-gradient(135deg, #ff7a18, #af002d);
+        color: #fff;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        font-size: 1rem;
+        margin-top: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+    }
+
+</style>
+</head>
+<body>
+
+<div class="section-header">
+    <h1>Bienvenido</h1>
+    <div class="bubble" style="width: 80px; height: 80px; left: 10%; animation-duration: 9s;"></div>
+    <div class="bubble" style="width: 50px; height: 50px; left: 40%; animation-duration: 11s;"></div>
+    <div class="bubble" style="width: 100px; height: 100px; left: 70%; animation-duration: 13s;"></div>
+    <div class="bubble" style="width: 60px; height: 60px; left: 85%; animation-duration: 10s;"></div>
+</div>
+
+<div style="padding:40px; text-align:center;">
+    <h2>Inicio de Sesión</h2>
+    <form>
+        <label>Usuario:</label><br>
+        <input type="text" value="agomez121"><br><br>
+        <label>Contraseña:</label><br>
+        <input type="password" value="12345"><br><br>
+        <button type="button" onclick="window.location.href='index.html'">Ingresar</button>
+    </form>
+</div>
+</body>
+</html>
