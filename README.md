@@ -65,7 +65,7 @@ La aplicación web busca centralizar información relevante para **extranjeros y
 
 👨‍💻 Autor
 
-Proyecto desarrollado por [Alvaro Gomez Barrios]
+Proyecto desarrollado por [Alvaro Gomez Barrios, Juan Pablo]
 
 Clase: Teoría General de Sistemas (TGS)
 
