@@ -1,259 +1,443 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Barranquilla Turismo - Guía para extranjeros</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title data-lang="app-title">Barranquilla Turismo - Guía para extranjeros</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <h1>Barranquilla Turismo</h1>
-      <p>Guía práctica para visitantes extranjeros: sitios, cómo llegar, precios y reservas.</p>
-      <div class="search-row">
-        <input id="search" placeholder="Buscar sitio, hotel o restaurante..." />
-        <select id="filter">
-          <option value="all">Todos</option>
-          <option value="atraccion">Atracciones</option>
-          <option value="hotel">Hotelería</option>
-          <option value="transporte">Transporte</option>
-          <option value="noche">Vida nocturna</option>
-          <option value="comida">Comida</option>
-        </select>
-      </div>
+    
+    <header class="site-header">
+        <div class="container">
+            <div class="top-row">
+                <h1 data-lang="header-title">Barranquilla Turismo</h1>
+                
+                <select id="lang-switch" class="lang-switch">
+                    <option value="es">ES</option>
+                    <option value="en">EN</option>
+                    <option value="pt">PT</option>
+                </select>
+            </div>
+
+            <p data-lang="desc">Guía práctica para visitantes extranjeros: sitios, cómo llegar, precios y reservas.</p>
+
+            <div class="search-row">
+                <input id="search" data-lang="search-placeholder" placeholder="Buscar sitio, hotel o restaurante..." />
+                <select id="filter">
+                    <option value="all" data-lang="filter-all">Todos</option>
+                    <option value="atraccion" data-lang="filter-atraccion">Atracciones</option>
+                    <option value="hotel" data-lang="filter-hotel">Hotelería</option>
+                    <option value="transporte" data-lang="filter-transporte">Transporte</option>
+                    <option value="noche" data-lang="filter-noche">Vida nocturna</option>
+                    <option value="comida" data-lang="filter-comida">Comida</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="info-visitante" class="card">
+            <h2 data-lang="info-title">Información para extranjeros</h2>
+            <p data-lang="info-text-1">Bienvenido a Barranquilla. Aquí encontrarás recomendaciones de seguridad, requisitos básicos (pasaporte, vacunas según corresponda) y contactos útiles.</p>
+            <ul>
+                <li data-lang="info-list-1">Oficina de turismo: Calle 72 #52-20, teléfono: +57 5 1234567</li>
+                <li data-lang="info-list-2">Transporte desde aeropuerto: taxi autorizado y servicio de buses / app móviles.</li>
+            </ul>
+        </section>
+        
+        <section id="listado" class="grid">
+            
+            <article class="card sitio" data-name="Puerto Mocho" data-type="atraccion">
+                <h3 data-lang="sitio-puerto-mocho-title">Puerto Mocho</h3>
+                <p class="meta" data-lang="sitio-puerto-mocho-dir">Dirección: Avenida del Río, Barranquilla</p>
+                <p data-lang="sitio-puerto-mocho-como-llegar">Cómo llegar: taxi 15–25 min desde el centro; referencia: cerca del Muelle.</p>
+                <p data-lang="sitio-puerto-mocho-referencia">Punto de referencia: Muelle Turístico</p>
+                <p data-lang="sitio-puerto-mocho-precio">Precio: Entrada libre / paseo en bote COP 20.000 por persona (ejemplo)</p>
+                <p data-lang="sitio-puerto-mocho-permite">Permite: Niños: Sí · Mascotas: No</p>
+                
+                <div class="rating" data-rating="0">
+                    <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                </div>
+                <div class="comentarios">
+                    <textarea class="comentario-text" data-lang="review-placeholder" placeholder="Escribe una reseña..."></textarea>
+                    <button class="btn guardar-comentario" data-lang="review-btn">Guardar reseña</button>
+                    <ul class="lista-comentarios"></ul>
+                </div>
+
+                <div class="actions">
+                    <button class="btn reserva" data-title="Puerto Mocho" data-lang="btn-reserva">Reservar paseo</button>
+                    <button class="btn detalles" data-lang="btn-detalles">Ver más</button>
+                </div>
+                <div class="detalles oculto">
+                    <p data-lang="sitio-puerto-mocho-detalles">Horario: 8:00–17:00. Servicios: baños, vendedores ambulantes, estacionamiento cercano.</p>
+                </div>
+            </article>
+
+            <article class="card sitio" data-name="Malecom" data-type="atraccion">
+                <h3 data-lang="sitio-malecom-title">Malecom</h3>
+                <p class="meta" data-lang="sitio-malecom-dir">Dirección: Malecón del Río</p>
+                <p data-lang="sitio-malecom-como-llegar">Cómo llegar: caminando desde el Centro, bus urbano rutas 10 y 12; referencia: a la vera del río Magdalena.</p>
+                <p data-lang="sitio-malecom-precio">Precio: gratuito</p>
+                <p data-lang="sitio-malecom-permite">Permite: Niños: Sí · Mascotas: Sí (con correa)</p>
+                
+                <div class="rating" data-rating="0">
+                    <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                </div>
+                <div class="comentarios">
+                    <textarea class="comentario-text" data-lang="review-placeholder" placeholder="Escribe una reseña..."></textarea>
+                    <button class="btn guardar-comentario" data-lang="review-btn">Guardar reseña</button>
+                    <ul class="lista-comentarios"></ul>
+                </div>
+                
+                <div class="actions">
+                    <button class="btn reserva" data-title="Malecom" data-lang="btn-reserva-evento">Reservar evento</button>
+                    <button class="btn detalles" data-lang="btn-detalles">Ver más</button>
+                </div>
+                <div class="detalles oculto">
+                    <p data-lang="sitio-malecom-detalles">Ideal para caminatas, eventos culturales y ver el atardecer.</p>
+                </div>
+            </article>
+
+            <article class="card sitio" data-name="Zoológico" data-type="atraccion">
+                <h3 data-lang="sitio-zoologico-title">Zoológico de Barranquilla</h3>
+                <p class="meta" data-lang="sitio-zoologico-dir">Dirección: Carrera 5 con Calle 20</p>
+                <p data-lang="sitio-zoologico-como-llegar">Cómo llegar: taxi o bus; referencia: cercano al Estadio Metropolitano.</p>
+                <p data-lang="sitio-zoologico-precio">Precio: Adultos COP 25.000 · Niños COP 10.000 (ejemplo)</p>
+                <p data-lang="sitio-zoologico-permite">Permite: Niños: Sí · Mascotas: No</p>
+                
+                <div class="rating" data-rating="0">
+                    <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                </div>
+                <div class="comentarios">
+                    <textarea class="comentario-text" data-lang="review-placeholder" placeholder="Escribe una reseña..."></textarea>
+                    <button class="btn guardar-comentario" data-lang="review-btn">Guardar reseña</button>
+                    <ul class="lista-comentarios"></ul>
+                </div>
+                
+                <div class="actions">
+                    <button class="btn reserva" data-title="Zoológico de Barranquilla" data-lang="btn-comprar-entradas">Comprar entradas</button>
+                    <button class="btn detalles" data-lang="btn-detalles">Ver más</button>
+                </div>
+                <div class="detalles oculto">
+                    <p data-lang="sitio-zoologico-detalles">Horario: 9:00–16:00, cerrado los lunes.</p>
+                </div>
+            </article>
+
+            <article class="card sitio" data-name="Playa Puerto Colombia" data-type="atraccion">
+                <h3 data-lang="sitio-playa-title">Playa Puerto Colombia</h3>
+                <p class="meta" data-lang="sitio-playa-dir">Dirección: Puerto Colombia, Atlántico (cercano a Barranquilla)</p>
+                <p data-lang="sitio-playa-como-llegar">Cómo llegar: en bus o carro particular por la Vía al Mar; referencia: el viejo muelle histórico.</p>
+                <p data-lang="sitio-playa-precio">Precio: gratuito / servicios pagos</p>
+                <p data-lang="sitio-playa-permite">Permite: Niños: Sí · Mascotas: Sí (según zona)</p>
+                
+                <div class="rating" data-rating="0">
+                    <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                </div>
+                <div class="comentarios">
+                    <textarea class="comentario-text" data-lang="review-placeholder" placeholder="Escribe una reseña..."></textarea>
+                    <button class="btn guardar-comentario" data-lang="review-btn">Guardar reseña</button>
+                    <ul class="lista-comentarios"></ul>
+                </div>
+
+                <div class="actions">
+                    <button class="btn reserva" data-title="Playa Puerto Colombia" data-lang="btn-reserva-tour">Reservar tour</button>
+                    <button class="btn detalles" data-lang="btn-detalles">Ver más</button>
+                </div>
+                <div class="detalles oculto">
+                    <p data-lang="sitio-playa-detalles">Servicios: quioscos, salvavidas en temporada alta, estacionamiento.</p>
+                </div>
+            </article>
+
+            <article class="card sitio" data-name="Hotel Caribe" data-type="hotel">
+                <h3 data-lang="sitio-hotel-title">Hotel Caribe</h3>
+                <p class="meta" data-lang="sitio-hotel-dir">Dirección: Calle 84 #53-20</p>
+                <p data-lang="sitio-hotel-como-llegar">Cómo llegar: taxi 10 min desde el aeropuerto. Reserva: teléfono +57 5 7654321</p>
+                <p data-lang="sitio-hotel-precio">Precios: Habitación doble desde COP 180.000 / noche (ejemplo)</p>
+                <p data-lang="sitio-hotel-permite">Permite: Niños: Sí · Mascotas: Consultar</p>
+                
+                <div class="rating" data-rating="0">
+                    <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                </div>
+                <div class="comentarios">
+                    <textarea class="comentario-text" data-lang="review-placeholder" placeholder="Escribe una reseña..."></textarea>
+                    <button class="btn guardar-comentario" data-lang="review-btn">Guardar reseña</button>
+                    <ul class="lista-comentarios"></ul>
+                </div>
+                
+                <div class="actions">
+                    <button class="btn reserva" data-title="Hotel Caribe" data-lang="btn-reserva-habitacion">Reservar habitación</button>
+                    <button class="btn detalles" data-lang="btn-detalles">Ver más</button>
+                </div>
+                <div class="detalles oculto">
+                    <p data-lang="sitio-hotel-detalles">Servicios: Wi-Fi, desayuno incluido, piscina.</p>
+                </div>
+            </article>
+
+            <article class="card sitio" data-name="Taxi autorizado" data-type="transporte">
+                <h3 data-lang="sitio-taxi-title">Taxi autorizado</h3>
+                <p class="meta" data-lang="sitio-taxi-como-llegar">Cómo llegar: disponible en aeropuerto y puntos oficiales</p>
+                <p data-lang="sitio-taxi-tarifa">Tarifa aproximada: COP 35.000–60.000 al centro (dependiendo de tráfico)</p>
+                <p data-lang="sitio-taxi-reserva">Reserva: App de taxis o punto oficial del aeropuerto.</p>
+            </article>
+
+            <article class="card sitio" data-name="La Troja" data-type="noche">
+                <h3 data-lang="sitio-troja-title">La Troja</h3>
+                <p class="meta" data-lang="sitio-troja-dir">Dirección: Av. Carrera 46 (ejemplo)</p>
+                <p data-lang="sitio-troja-como-llegar">Cómo llegar: taxi; referencia: cerca del barrio El Prado</p>
+                <p data-lang="sitio-troja-precio">Precio: Entrada variable, bebidas desde COP 15.000</p>
+                <p data-lang="sitio-troja-permite">Permite: Niños: No · Mascotas: No</p>
+
+                <div class="rating" data-rating="0">
+                    <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                </div>
+                <div class="comentarios">
+                    <textarea class="comentario-text" data-lang="review-placeholder" placeholder="Escribe una reseña..."></textarea>
+                    <button class="btn guardar-comentario" data-lang="review-btn">Guardar reseña</button>
+                    <ul class="lista-comentarios"></ul>
+                </div>
+                
+                <div class="actions">
+                    <button class="btn reserva" data-title="La Troja" data-lang="btn-reserva-mesa">Reservar mesa</button>
+                    <button class="btn detalles" data-lang="btn-detalles">Ver más</button>
+                </div>
+                <div class="detalles oculto">
+                    <p data-lang="sitio-troja-detalles">Horario: 20:00–03:00. Música en vivo y baile.</p>
+                </div>
+            </article>
+
+            <article class="card sitio" data-name="Kilimanjaro" data-type="comida">
+                <h3 data-lang="sitio-kilimanjaro-title">Kilimanjaro</h3>
+                <p class="meta" data-lang="sitio-kilimanjaro-dir">Dirección: Carrera 60 #80-75 (ejemplo)</p>
+                <p data-lang="sitio-kilimanjaro-como-llegar">Cómo llegar: taxi o bus urbano</p>
+                <p data-lang="sitio-kilimanjaro-especialidad">Especialidad: Comida africana / internacional. Precio promedio: COP 40.000 por persona</p>
+                <p data-lang="sitio-kilimanjaro-permite">Permite: Niños: Sí · Mascotas: No</p>
+                
+                <div class="rating" data-rating="0">
+                    <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                </div>
+                <div class="comentarios">
+                    <textarea class="comentario-text" data-lang="review-placeholder" placeholder="Escribe una reseña..."></textarea>
+                    <button class="btn guardar-comentario" data-lang="review-btn">Guardar reseña</button>
+                    <ul class="lista-comentarios"></ul>
+                </div>
+
+                <div class="actions">
+                    <button class="btn reserva" data-title="Kilimanjaro" data-lang="btn-hacer-reserva">Hacer reserva</button>
+                    <button class="btn detalles" data-lang="btn-detalles">Ver más</button>
+                </div>
+                <div class="detalles oculto">
+                    <p data-lang="sitio-kilimanjaro-detalles">Opciones vegetarianas disponibles. Horario: 12:00–23:00.</p>
+                </div>
+            </article>
+
+        </section>
+        
+        <section id="mapa" class="card">
+            <h2 data-lang="map-title">Mapa y direcciones</h2>
+            <p data-lang="map-text">Incrusta aquí un mapa (Google Maps / OpenStreetMap). Si vas a subir a producción, reemplaza el iframe por tu API key y ubicaciones reales.</p>
+            <div class="map-placeholder">
+                <iframe id="map-iframe" width="100%" height="250" style="border:0;" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?key=${key}&q=Barranquilla"></iframe>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="modal" class="modal oculto">
+        <div class="modal-contenido">
+            <button id="cerrar" class="btn cerrar">×</button>
+            <h3 id="modal-title" data-lang="modal-title">Reservar</h3>
+            <form id="form-reserva">
+                <label data-lang="modal-label-nombre">Nombre del visitante
+                    <input id="nombre" required />
+                </label>
+                <label data-lang="modal-label-correo">Correo electrónico
+                    <input id="email" type="email" required />
+                </label>
+                <label data-lang="modal-label-fecha">Fecha
+                    <input id="fecha" type="date" required />
+                </label>
+                <label data-lang="modal-label-personas">Personas
+                    <input id="personas" type="number" min="1" value="1" required />
+                </label>
+                <label data-lang="modal-label-comentarios">Comentarios / items especiales
+                    <textarea id="comentarios" data-lang="modal-placeholder-comentarios" placeholder="Niños, mascotas, accesibilidad..."></textarea>
+                </label>
+                <div class="modal-actions">
+                    <button type="submit" class="btn" data-lang="modal-btn-enviar">Enviar reserva</button>
+                </div>
+            </form>
+        </div>
     </div>
-  </header>
 
-  <main class="container">
-    <section id="info-visitante" class="card">
-      <h2>Información para extranjeros</h2>
-      <p>Bienvenido a Barranquilla. Aquí encontrarás recomendaciones de seguridad, requisitos básicos (pasaporte, vacunas según corresponda) y contactos útiles.</p>
-      <ul>
-        <li>Oficina de turismo: Calle 72 #52-20, teléfono: +57 5 1234567</li>
-        <li>Transporte desde aeropuerto: taxi autorizado y servicio de buses / app móviles.</li>
-      </ul>
-    </section>
-
-    <section id="listado" class="grid">
-      <!-- Cada tarjeta tiene data-type para filtrar -->
-
-      <!-- Atracción ejemplo -->
-      <article class="card sitio" data-name="Puerto Mocho" data-type="atraccion">
-        <h3>Puerto Mocho</h3>
-        <p class="meta">Dirección: Avenida del Río, Barranquilla</p>
-        <p>Cómo llegar: taxi 15–25 min desde el centro; referencia: cerca del Muelle.</p>
-        <p>Punto de referencia: Muelle Turístico</p>
-        <p>Precio: Entrada libre / paseo en bote COP 20.000 por persona (ejemplo)</p>
-        <p>Permite: Niños: Sí · Mascotas: No</p>
-        <div class="actions">
-          <button class="btn reserva" data-title="Puerto Mocho">Reservar paseo</button>
-          <button class="btn detalles">Ver más</button>
+    <footer class="site-footer">
+        <div class="container">
+            <p data-lang="footer-warning">Datos de ejemplo. Verifica direcciones, precios y horarios antes de publicar.</p>
+            <p data-lang="footer-credit">Creado para trabajo final - Teoría General de Sistemas (TGS).</p>
         </div>
-        <div class="detalles oculto">
-          <p>Horario: 8:00–17:00. Servicios: baños, vendedores ambulantes, estacionamiento cercano.</p>
-        </div>
-      </article>
+    </footer>
 
-      <!-- Malecom (Malecón) -->
-      <article class="card sitio" data-name="Malecom" data-type="atraccion">
-        <h3>Malecom</h3>
-        <p class="meta">Dirección: Malecón del Río</p>
-        <p>Cómo llegar: caminando desde el Centro, bus urbano rutas 10 y 12; referencia: a la vera del río Magdalena.</p>
-        <p>Precio: gratuito</p>
-        <p>Permite: Niños: Sí · Mascotas: Sí (con correa)</p>
-        <div class="actions">
-          <button class="btn reserva" data-title="Malecom">Reservar evento</button>
-          <button class="btn detalles">Ver más</button>
-        </div>
-        <div class="detalles oculto">
-          <p>Ideal para caminatas, eventos culturales y ver el atardecer.</p>
-        </div>
-      </article>
+    <script>
+       
+        const currentUser = "Visitante"; 
 
-      <!-- Zoológico ejemplo -->
-      <article class="card sitio" data-name="Zoológico" data-type="atraccion">
-        <h3>Zoológico de Barranquilla</h3>
-        <p class="meta">Dirección: Carrera 5 con Calle 20</p>
-        <p>Cómo llegar: taxi o bus; referencia: cercano al Estadio Metropolitano.</p>
-        <p>Precio: Adultos COP 25.000 · Niños COP 10.000 (ejemplo)</p>
-        <p>Permite: Niños: Sí · Mascotas: No</p>
-        <div class="actions">
-          <button class="btn reserva" data-title="Zoológico de Barranquilla">Comprar entradas</button>
-          <button class="btn detalles">Ver más</button>
-        </div>
-        <div class="detalles oculto">
-          <p>Horario: 9:00–16:00, cerrado los lunes.</p>
-        </div>
-      </article>
+        
+        const textos = {
+            es: {
+                "app-title": "Barranquilla Turismo - Guía para extranjeros", "header-title": "Barranquilla Turismo", "desc": "Guía práctica para visitantes extranjeros: sitios, cómo llegar, precios y reservas.", "search-placeholder": "Buscar sitio, hotel o restaurante...", "filter-all": "Todos", "filter-atraccion": "Atracciones", "filter-hotel": "Hotelería", "filter-transporte": "Transporte", "filter-noche": "Vida nocturna", "filter-comida": "Comida", "info-title": "Información para extranjeros", "info-text-1": "Bienvenido a Barranquilla. Aquí encontrarás recomendaciones de seguridad, requisitos básicos (pasaporte, vacunas según corresponda) y contactos útiles.", "info-list-1": "Oficina de turismo: Calle 72 #52-20, teléfono: +57 5 1234567", "info-list-2": "Transporte desde aeropuerto: taxi autorizado y servicio de buses / app móviles.", "map-title": "Mapa y direcciones", "map-text": "Incrusta aquí un mapa (Google Maps / OpenStreetMap). Si vas a subir a producción, reemplaza el iframe por tu API key y ubicaciones reales.", "review-placeholder": "Escribe una reseña...", "review-btn": "Guardar reseña", "btn-reserva": "Reservar paseo", "btn-reserva-evento": "Reservar evento", "btn-comprar-entradas": "Comprar entradas", "btn-reserva-tour": "Reservar tour", "btn-reserva-habitacion": "Reservar habitación", "btn-reserva-mesa": "Reservar mesa", "btn-hacer-reserva": "Hacer reserva", "btn-detalles": "Ver más", "modal-title": "Reservar", "modal-label-nombre": "Nombre del visitante", "modal-label-correo": "Correo electrónico", "modal-label-fecha": "Fecha", "modal-label-personas": "Personas", "modal-label-comentarios": "Comentarios / items especiales", "modal-placeholder-comentarios": "Niños, mascotas, accesibilidad...", "modal-btn-enviar": "Enviar reserva", "footer-warning": "Datos de ejemplo. Verifica direcciones, precios y horarios antes de publicar.", "footer-credit": "Creado para trabajo final - Teoría General de Sistemas (TGS).", "sitio-puerto-mocho-title": "Puerto Mocho", "sitio-puerto-mocho-dir": "Dirección: Avenida del Río, Barranquilla", "sitio-puerto-mocho-como-llegar": "Cómo llegar: taxi 15–25 min desde el centro; referencia: cerca del Muelle.", "sitio-puerto-mocho-referencia": "Punto de referencia: Muelle Turístico", "sitio-puerto-mocho-precio": "Precio: Entrada libre / paseo en bote COP 20.000 por persona (ejemplo)", "sitio-puerto-mocho-permite": "Permite: Niños: Sí · Mascotas: No", "sitio-puerto-mocho-detalles": "Horario: 8:00–17:00. Servicios: baños, vendedores ambulantes, estacionamiento cercano.", "sitio-malecom-title": "Malecom", "sitio-malecom-dir": "Dirección: Malecón del Río", "sitio-malecom-como-llegar": "Cómo llegar: caminando desde el Centro, bus urbano rutas 10 y 12; referencia: a la vera del río Magdalena.", "sitio-malecom-precio": "Precio: gratuito", "sitio-malecom-permite": "Permite: Niños: Sí · Mascotas: Sí (con correa)", "sitio-malecom-detalles": "Ideal para caminatas, eventos culturales y ver el atardecer.", "sitio-zoologico-title": "Zoológico de Barranquilla", "sitio-zoologico-dir": "Dirección: Carrera 5 con Calle 20", "sitio-zoologico-como-llegar": "Cómo llegar: taxi o bus; referencia: cercano al Estadio Metropolitano.", "sitio-zoologico-precio": "Precio: Adultos COP 25.000 · Niños COP 10.000 (ejemplo)", "sitio-zoologico-permite": "Permite: Niños: Sí · Mascotas: No", "sitio-zoologico-detalles": "Horario: 9:00–16:00, cerrado los lunes.", "sitio-playa-title": "Playa Puerto Colombia", "sitio-playa-dir": "Dirección: Puerto Colombia, Atlántico (cercano a Barranquilla)", "sitio-playa-como-llegar": "Cómo llegar: en bus o carro particular por la Vía al Mar; referencia: el viejo muelle histórico.", "sitio-playa-precio": "Precio: gratuito / servicios pagos", "sitio-playa-permite": "Permite: Niños: Sí · Mascotas: Sí (según zona)", "sitio-playa-detalles": "Servicios: quioscos, salvavidas en temporada alta, estacionamiento.", "sitio-hotel-title": "Hotel Caribe", "sitio-hotel-dir": "Dirección: Calle 84 #53-20", "sitio-hotel-como-llegar": "Cómo llegar: taxi 10 min desde el aeropuerto. Reserva: teléfono +57 5 7654321", "sitio-hotel-precio": "Precios: Habitación doble desde COP 180.000 / noche (ejemplo)", "sitio-hotel-permite": "Permite: Niños: Sí · Mascotas: Consultar", "sitio-hotel-detalles": "Servicios: Wi-Fi, desayuno incluido, piscina.", "sitio-taxi-title": "Taxi autorizado", "sitio-taxi-como-llegar": "Cómo llegar: disponible en aeropuerto y puntos oficiales", "sitio-taxi-tarifa": "Tarifa aproximada: COP 35.000–60.000 al centro (dependiendo de tráfico)", "sitio-taxi-reserva": "Reserva: App de taxis o punto oficial del aeropuerto.", "sitio-troja-title": "La Troja", "sitio-troja-dir": "Dirección: Av. Carrera 46 (ejemplo)", "sitio-troja-como-llegar": "Cómo llegar: taxi; referencia: cerca del barrio El Prado", "sitio-troja-precio": "Precio: Entrada variable, bebidas desde COP 15.000", "sitio-troja-permite": "Permite: Niños: No · Mascotas: No", "sitio-troja-detalles": "Horario: 20:00–03:00. Música en vivo y baile.", "sitio-kilimanjaro-title": "Kilimanjaro", "sitio-kilimanjaro-dir": "Dirección: Carrera 60 #80-75 (ejemplo)", "sitio-kilimanjaro-como-llegar": "Cómo llegar: taxi o bus urbano", "sitio-kilimanjaro-especialidad": "Especialidad: Comida africana / internacional. Precio promedio: COP 40.000 por persona", "sitio-kilimanjaro-permite": "Permite: Niños: Sí · Mascotas: No", "sitio-kilimanjaro-detalles": "Opciones vegetarianas disponibles. Horario: 12:00–23:00.",
+            },
+            en: {
+                "app-title": "Barranquilla Tourism - Guide for Foreigners", "header-title": "Barranquilla Tourism", "desc": "Practical guide for foreign visitors: sites, how to get there, prices, and reservations.", "search-placeholder": "Search site, hotel, or restaurant...", "filter-all": "All", "filter-atraccion": "Attractions", "filter-hotel": "Hotels", "filter-transporte": "Transport", "filter-noche": "Nightlife", "filter-comida": "Food", "info-title": "Information for Foreigners", "info-text-1": "Welcome to Barranquilla. Here you will find security recommendations, basic requirements (passport, vaccinations as applicable) and useful contacts.", "info-list-1": "Tourist Office: Calle 72 #52-20, phone: +57 5 1234567", "info-list-2": "Airport transport: authorized taxi and bus / mobile app service.", "map-title": "Map and Directions", "map-text": "Embed a map here (Google Maps / OpenStreetMap). If you are going into production, replace the iframe with your API key and real locations.", "review-placeholder": "Write a review...", "review-btn": "Save Review", "btn-reserva": "Book trip", "btn-reserva-evento": "Book Event", "btn-comprar-entradas": "Buy Tickets", "btn-reserva-tour": "Book Tour", "btn-reserva-habitacion": "Book Room", "btn-reserva-mesa": "Book Table", "btn-hacer-reserva": "Make Reservation", "btn-detalles": "See more", "modal-title": "Book/Reserve", "modal-label-nombre": "Visitor Name", "modal-label-correo": "Email", "modal-label-fecha": "Date", "modal-label-personas": "People", "modal-label-comentarios": "Comments / special items", "modal-placeholder-comentarios": "Children, pets, accessibility...", "modal-btn-enviar": "Send Reservation", "footer-warning": "Example data. Verify addresses, prices, and schedules before publishing.", "footer-credit": "Created for final project - General Systems Theory (GST).", "sitio-puerto-mocho-title": "Puerto Mocho Beach", "sitio-puerto-mocho-dir": "Address: Avenida del Río, Barranquilla", "sitio-puerto-mocho-como-llegar": "How to get there: 15–25 min taxi ride from downtown; reference: near the Pier.", "sitio-puerto-mocho-referencia": "Reference Point: Tourist Pier", "sitio-puerto-mocho-precio": "Price: Free entry / boat ride COP 20,000 per person (example)", "sitio-puerto-mocho-permite": "Allowed: Children: Yes · Pets: No", "sitio-puerto-mocho-detalles": "Hours: 8:00 AM–5:00 PM. Services: restrooms, street vendors, nearby parking.", "sitio-malecom-title": "Malecom Boardwalk", "sitio-malecom-dir": "Address: Malecón del Río", "sitio-malecom-como-llegar": "How to get there: walking from the Center, urban bus routes 10 and 12; reference: along the Magdalena River.", "sitio-malecom-precio": "Price: free", "sitio-malecom-permite": "Allowed: Children: Yes · Pets: Yes (on leash)", "sitio-malecom-detalles": "Ideal for walks, cultural events, and watching the sunset.", "sitio-zoologico-title": "Barranquilla Zoo", "sitio-zoologico-dir": "Address: Carrera 5 with Calle 20", "sitio-zoologico-como-llegar": "How to get there: taxi or bus; reference: near the Metropolitan Stadium.", "sitio-zoologico-precio": "Price: Adults COP 25,000 · Children COP 10,000 (example)", "sitio-zoologico-permite": "Allowed: Children: Yes · Pets: No", "sitio-zoologico-detalles": "Hours: 9:00 AM–4:00 PM, closed Mondays.", "sitio-playa-title": "Puerto Colombia Beach", "sitio-playa-dir": "Address: Puerto Colombia, Atlántico (near Barranquilla)", "sitio-playa-como-llegar": "How to get there: by bus or private car via Vía al Mar; reference: the old historic pier.", "sitio-playa-precio": "Price: free / paid services", "sitio-playa-permite": "Allowed: Children: Yes · Pets: Yes (depending on area)", "sitio-playa-detalles": "Services: kiosks, lifeguards in high season, parking.", "sitio-hotel-title": "Hotel Caribe", "sitio-hotel-dir": "Address: Calle 84 #53-20", "sitio-hotel-como-llegar": "How to get there: 10 min taxi ride from the airport. Reservation: phone +57 5 7654321", "sitio-hotel-precio": "Prices: Double room from COP 180,000 / night (example)", "sitio-hotel-permite": "Allowed: Children: Yes · Pets: Consult", "sitio-hotel-detalles": "Amenities: Wi-Fi, breakfast included, pool.", "sitio-taxi-title": "Authorized Taxi", "sitio-taxi-como-llegar": "How to get there: available at the airport and official spots", "sitio-taxi-tarifa": "Approximate fare: COP 35,000–60,000 to downtown (depending on traffic)", "sitio-taxi-reserva": "Reservation: Taxi app or official airport desk.", "sitio-troja-title": "La Troja", "sitio-troja-dir": "Address: Av. Carrera 46 (example)", "sitio-troja-como-llegar": "How to get there: taxi; reference: near El Prado neighborhood", "sitio-troja-precio": "Price: Variable entry, drinks from COP 15,000", "sitio-troja-permite": "Allowed: Children: No · Pets: No", "sitio-troja-detalles": "Hours: 8:00 PM–3:00 AM. Live music and dancing.", "sitio-kilimanjaro-title": "Kilimanjaro Restaurant", "sitio-kilimanjaro-dir": "Address: Carrera 60 #80-75 (example)", "sitio-kilimanjaro-como-llegar": "How to get there: taxi or urban bus", "sitio-kilimanjaro-especialidad": "Specialty: African / international food. Average price: COP 40,000 per person", "sitio-kilimanjaro-permite": "Allowed: Children: Yes · Pets: No", "sitio-kilimanjaro-detalles": "Vegetarian options available. Hours: 12:00 PM–11:00 PM.",
+            },
+            pt: {
+                "app-title": "Turismo em Barranquilla - Guia para estrangeiros", "header-title": "Turismo em Barranquilla", "desc": "Guia prático para visitantes estrangeiros: locais, como chegar, preços e reservas.", "search-placeholder": "Pesquisar local, hotel ou restaurante...", "filter-all": "Todos", "filter-atraccion": "Atrações", "filter-hotel": "Hotelaria", "filter-transporte": "Transporte", "filter-noche": "Vida Noturna", "filter-comida": "Comida", "info-title": "Informações para estrangeiros", "info-text-1": "Bem-vindo a Barranquilla. Aqui encontrará recomendações de segurança, requisitos básicos (passaporte, vacinas conforme aplicável) e contactos úteis.", "info-list-1": "Escritório de Turismo: Calle 72 #52-20, telefone: +57 5 1234567", "info-list-2": "Transporte do aeroporto: táxi autorizado e serviço de autocarros / apps móveis.", "map-title": "Mapa e direções", "map-text": "Incorpore um mapa aqui (Google Maps / OpenStreetMap). Se for publicar, substitua o iframe pela sua chave API e localizações reais.", "review-placeholder": "Escreva uma avaliação...", "review-btn": "Salvar Avaliação", "btn-reserva": "Reservar passeio", "btn-reserva-evento": "Reservar Evento", "btn-comprar-entradas": "Comprar Ingressos", "btn-reserva-tour": "Reservar Tour", "btn-reserva-habitacion": "Reservar Quarto", "btn-reserva-mesa": "Reservar Mesa", "btn-hacer-reserva": "Fazer Reserva", "btn-detalles": "Ver mais", "modal-title": "Reservar", "modal-label-nombre": "Nome do visitante", "modal-label-correo": "Email", "modal-label-fecha": "Data", "modal-label-personas": "Pessoas", "modal-label-comentarios": "Comentários / itens especiais", "modal-placeholder-comentarios": "Crianças, animais de estimação, acessibilidade...", "modal-btn-enviar": "Enviar Reserva", "footer-warning": "Dados de exemplo. Verifique endereços, preços y horários antes de publicar.", "footer-credit": "Criado para trabalho final - Teoria Geral de Sistemas (TGS).", "sitio-puerto-mocho-title": "Praia Puerto Mocho", "sitio-puerto-mocho-dir": "Endereço: Avenida del Río, Barranquilla", "sitio-puerto-mocho-como-llegar": "Como chegar: táxi 15–25 min do centro; referência: perto do Cais.", "sitio-puerto-mocho-referencia": "Ponto de Referência: Cais Turístico", "sitio-puerto-mocho-precio": "Preço: Entrada gratuita / passeio de barco COP 20.000 por pessoa (exemplo)", "sitio-puerto-mocho-permite": "Permitido: Crianças: Sim · Animais de estimação: Não", "sitio-puerto-mocho-detalles": "Horário: 8:00–17:00. Serviços: banheiros, vendedores ambulantes, estacionamento próximo.", "sitio-malecom-title": "Malecom", "sitio-malecom-dir": "Endereço: Malecón del Río", "sitio-malecom-como-llegar": "Como chegar: a pé do Centro, autocarro urbano rotas 10 e 12; referência: à beira do rio Magdalena.", "sitio-malecom-precio": "Preço: gratuito", "sitio-malecom-permite": "Permitido: Crianças: Sim · Animais de estimação: Sim (com trela)", "sitio-malecom-detalles": "Ideal para caminhadas, eventos culturais e assistir ao pôr do sol.", "sitio-zoologico-title": "Jardim Zoológico de Barranquilla", "sitio-zoologico-dir": "Endereço: Carrera 5 com Calle 20", "sitio-zoologico-como-llegar": "Como chegar: táxi ou autocarro; referência: perto do Estádio Metropolitano.", "sitio-zoologico-precio": "Preço: Adultos COP 25.000 · Crianças COP 10.000 (ejemplo)", "sitio-zoologico-permite": "Permitido: Crianças: Sim · Animais de estimação: Não", "sitio-zoologico-detalles": "Horário: 9:00–16:00, fechado às segundas-feiras.", "sitio-playa-title": "Praia Puerto Colombia", "sitio-playa-dir": "Endereço: Puerto Colombia, Atlántico (perto de Barranquilla)", "sitio-playa-como-llegar": "Como chegar: de autocarro ou carro particular pela Vía al Mar; referência: o antigo cais histórico.", "sitio-playa-precio": "Preço: gratuito / serviços pagos", "sitio-playa-permite": "Permitido: Crianças: Sim · Animais de estimação: Sim (dependendo da área)", "sitio-playa-detalles": "Serviços: quiosques, salva-vidas na época alta, estacionamento.", "sitio-hotel-title": "Hotel Caribe", "sitio-hotel-dir": "Endereço: Calle 84 #53-20", "sitio-hotel-como-llegar": "Como chegar: táxi 10 min do aeroporto. Reserva: telefone +57 5 7654321", "sitio-hotel-precio": "Preços: Quarto duplo a partir de COP 180.000 / noite (exemplo)", "sitio-hotel-permite": "Permitido: Crianças: Sim · Animais de estimação: Consultar", "sitio-hotel-detalles": "Comodidades: Wi-Fi, pequeno-almoço incluído, piscina.", "sitio-taxi-title": "Táxi Autorizado", "sitio-taxi-como-llegar": "Como chegar: disponível no aeroporto e pontos oficiais", "sitio-taxi-tarifa": "Tarifa aproximada: COP 35.000–60.000 para o centro (dependendo do trânsito)", "sitio-taxi-reserva": "Reserva: App de táxis ou balcão oficial do aeroporto.", "sitio-troja-title": "La Troja", "sitio-troja-dir": "Endereço: Av. Carrera 46 (exemplo)", "sitio-troja-como-llegar": "Como chegar: táxi; referência: perto do bairro El Prado", "sitio-troja-precio": "Preço: Entrada variável, bebidas a partir de COP 15.000", "sitio-troja-permite": "Permitido: Crianças: Não · Animais de estimação: Não", "sitio-troja-detalles": "Horário: 20:00–03:00. Música ao vivo e dança.", "sitio-kilimanjaro-title": "Kilimanjaro Restaurante", "sitio-kilimanjaro-dir": "Endereço: Carrera 60 #80-75 (ejemplo)", "sitio-kilimanjaro-como-llegar": "Como chegar: táxi ou autocarro urbano", "sitio-kilimanjaro-especialidad": "Especialidade: Comida africana / internacional. Preço médio: COP 40.000 por pessoa", "sitio-kilimanjaro-permite": "Permitido: Crianças: Sim · Animais de estimação: Não", "sitio-kilimanjaro-detalles": "Opções vegetarianas disponíveis. Horário: 12:00–23:00.",
+            }
+        };
 
-      <!-- Playa Puerto Colombia -->
-      <article class="card sitio" data-name="Playa Puerto Colombia" data-type="atraccion">
-        <h3>Playa Puerto Colombia</h3>
-        <p class="meta">Dirección: Puerto Colombia, Atlántico (cercano a Barranquilla)</p>
-        <p>Cómo llegar: en bus o carro particular por la Vía al Mar; referencia: el viejo muelle histórico.</p>
-        <p>Precio: gratuito / servicios pagos</p>
-        <p>Permite: Niños: Sí · Mascotas: Sí (según zona)</p>
-        <div class="actions">
-          <button class="btn reserva" data-title="Playa Puerto Colombia">Reservar tour</button>
-          <button class="btn detalles">Ver más</button>
-        </div>
-        <div class="detalles oculto">
-          <p>Servicios: quioscos, salvavidas en temporada alta, estacionamiento.</p>
-        </div>
-      </article>
+        const updateLanguage = (lang) => {
+            document.title = textos[lang]["app-title"];
+            document.querySelectorAll("[data-lang]").forEach(el => {
+                const key = el.getAttribute("data-lang");
+                const text = textos[lang][key];
 
-      <!-- Hotelería ejemplo -->
-      <article class="card sitio" data-name="Hotel Caribe" data-type="hotel">
-        <h3>Hotel Caribe</h3>
-        <p class="meta">Dirección: Calle 84 #53-20</p>
-        <p>Cómo llegar: taxi 10 min desde el aeropuerto. Reserva: teléfono +57 5 7654321</p>
-        <p>Precios: Habitación doble desde COP 180.000 / noche (ejemplo)</p>
-        <p>Permite: Niños: Sí · Mascotas: Consultar</p>
-        <div class="actions">
-          <button class="btn reserva" data-title="Hotel Caribe">Reservar habitación</button>
-          <button class="btn detalles">Ver más</button>
-        </div>
-        <div class="detalles oculto">
-          <p>Servicios: Wi-Fi, desayuno incluido, piscina.</p>
-        </div>
-      </article>
+                if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                    el.placeholder = text;
+                } else if (el.tagName === 'LABEL') {
+                    el.childNodes[0].nodeValue = text;
+                } else {
+                    el.textContent = text;
+                }
+            });
 
-      <!-- Transporte -->
-      <article class="card sitio" data-name="Taxi autorizado" data-type="transporte">
-        <h3>Taxi autorizado</h3>
-        <p class="meta">Cómo llegar: disponible en aeropuerto y puntos oficiales</p>
-        <p>Tarifa aproximada: COP 35.000–60.000 al centro (dependiendo de tráfico)</p>
-        <p>Reserva: App de taxis o punto oficial del aeropuerto.</p>
-      </article>
+            document.querySelectorAll('#filter option').forEach(option => {
+                const key = option.getAttribute("data-lang");
+                if (key) {
+                    option.textContent = textos[lang][key];
+                }
+            });
+        };
 
-      <!-- Vida nocturna -->
-      <article class="card sitio" data-name="La Troja" data-type="noche">
-        <h3>La Troja</h3>
-        <p class="meta">Dirección: Av. Carrera 46 (ejemplo)</p>
-        <p>Cómo llegar: taxi; referencia: cerca del barrio El Prado</p>
-        <p>Precio: Entrada variable, bebidas desde COP 15.000</p>
-        <p>Permite: Niños: No · Mascotas: No</p>
-        <div class="actions">
-          <button class="btn reserva" data-title="La Troja">Reservar mesa</button>
-          <button class="btn detalles">Ver más</button>
-        </div>
-        <div class="detalles oculto">
-          <p>Horario: 20:00–03:00. Música en vivo y baile.</p>
-        </div>
-      </article>
+       
+        const initialLang = document.getElementById("lang-switch").value;
+        updateLanguage(initialLang);
 
-      <!-- Restaurantes y comida rápida -->
-      <article class="card sitio" data-name="Kilimanjaro" data-type="comida">
-        <h3>Kilimanjaro</h3>
-        <p class="meta">Dirección: Carrera 60 #80-75 (ejemplo)</p>
-        <p>Cómo llegar: taxi o bus urbano</p>
-        <p>Especialidad: Comida africana / internacional. Precio promedio: COP 40.000 por persona</p>
-        <p>Permite: Niños: Sí · Mascotas: No</p>
-        <div class="actions">
-          <button class="btn reserva" data-title="Kilimanjaro">Hacer reserva</button>
-          <button class="btn detalles">Ver más</button>
-        </div>
-        <div class="detalles oculto">
-          <p>Opciones vegetarianas disponibles. Horario: 12:00–23:00.</p>
-        </div>
-      </article>
-
-    </section>
-
-    <section id="mapa" class="card">
-      <h2>Mapa y direcciones</h2>
-      <p>Incrusta aquí un mapa (Google Maps / OpenStreetMap). Si vas a subir a producción, reemplaza el iframe por tu API key y ubicaciones reales.</p>
-      <div class="map-placeholder">[Mapa interactivo - colocar iframe de Google Maps u OpenStreetMap]</div>
-    </section>
-
-  </main>
-
-  <!-- Modal de reserva simple -->
-  <div id="modal" class="modal oculto">
-    <div class="modal-contenido">
-      <button id="cerrar" class="btn cerrar">×</button>
-      <h3 id="modal-title">Reservar</h3>
-      <form id="form-reserva">
-        <label>Nombre del visitante
-          <input id="nombre" required />
-        </label>
-        <label>Correo electrónico
-          <input id="email" type="email" required />
-        </label>
-        <label>Fecha
-          <input id="fecha" type="date" required />
-        </label>
-        <label>Personas
-          <input id="personas" type="number" min="1" value="1" required />
-        </label>
-        <label>Comentarios / items especiales
-          <textarea id="comentarios" placeholder="Niños, mascotas, accesibilidad..."></textarea>
-        </label>
-        <div class="modal-actions">
-          <button type="submit" class="btn">Enviar reserva</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>Datos de ejemplo. Verifica direcciones, precios y horarios antes de publicar.</p>
-      <p>Creado para trabajo final - Teoría General de Sistemas (TGS).</p>
-    </div>
-  </footer>
-
-  <script>
-    // Funcionalidad básica: búsqueda, filtro, abrir modal de reserva y toggles
-    document.addEventListener('DOMContentLoaded', ()=>{
-      const search = document.getElementById('search');
-      const filter = document.getElementById('filter');
-      const sitios = Array.from(document.querySelectorAll('.sitio'));
-
-      function aplicarFiltro(){
-        const q = search.value.toLowerCase();
-        const tipo = filter.value;
-        sitios.forEach(s =>{
-          const name = s.dataset.name.toLowerCase();
-          const matchesQ = !q || name.includes(q);
-          const matchesTipo = tipo === 'all' || s.dataset.type === tipo;
-          s.style.display = (matchesQ && matchesTipo) ? '' : 'none';
+        document.getElementById("lang-switch").addEventListener("change", (e) => {
+            const lang = e.target.value;
+            updateLanguage(lang);
         });
-      }
+        
+        
+        document.addEventListener('DOMContentLoaded', ()=>{
+            const search = document.getElementById('search');
+            const filter = document.getElementById('filter');
+            const sitios = Array.from(document.querySelectorAll('.sitio'));
 
-      search.addEventListener('input', aplicarFiltro);
-      filter.addEventListener('change', aplicarFiltro);
+            function aplicarFiltro(){
+                const q = search.value.toLowerCase();
+                const tipo = filter.value;
+                sitios.forEach(s =>{
+                    const name = s.dataset.name.toLowerCase();
+                    const matchesQ = !q || name.includes(q);
+                    const matchesTipo = tipo === 'all' || s.dataset.type === tipo;
+                    s.style.display = (matchesQ && matchesTipo) ? '' : 'none';
+                });
+            }
 
-      // Detalles toggle
-      document.querySelectorAll('.btn.detalles').forEach(btn=>{
-        btn.addEventListener('click', e=>{
-          const card = e.target.closest('.card');
-          const det = card.querySelector('.detalles');
-          det.classList.toggle('oculto');
+            search.addEventListener('input', aplicarFiltro);
+            filter.addEventListener('change', aplicarFiltro);
+
+            
+            document.querySelectorAll('.btn.detalles').forEach(btn=>{
+                btn.addEventListener('click', e=>{
+                    const card = e.target.closest('.card');
+                    const det = card.querySelector('.detalles');
+                    det.classList.toggle('oculto'); 
+                    
+                    const currentLang = document.getElementById("lang-switch").value;
+                    const isHidden = det.classList.contains('oculto');
+                    const btnDetailsText = textos[currentLang]["btn-detalles"];
+                    const btnHideText = { es: "Ocultar", en: "Hide", pt: "Ocultar" };
+                    e.target.textContent = isHidden ? btnDetailsText : btnHideText[currentLang];
+                });
+            });
+
+            const modal = document.getElementById('modal');
+            const modalTitle = document.getElementById('modal-title');
+            document.querySelectorAll('.btn.reserva').forEach(b=>{
+                b.addEventListener('click', e=>{
+                    const currentLang = document.getElementById("lang-switch").value;
+                    modal.classList.remove('oculto');
+                    const modalBaseTitle = textos[currentLang]["modal-title"];
+                    modalTitle.textContent = modalBaseTitle + ': ' + (e.target.dataset.title || 'Servicio');
+                });
+            });
+            document.getElementById('cerrar').addEventListener('click', ()=> modal.classList.add('oculto'));
+
+            document.getElementById('form-reserva').addEventListener('submit', e=>{
+                e.preventDefault();
+                const currentLang = document.getElementById("lang-switch").value;
+                const messages = {
+                    es: 'Reserva enviada. Verifica correo para confirmación (simulado).',
+                    en: 'Reservation sent. Check email for confirmation (simulated).',
+                    pt: 'Reserva enviada. Verifique o email para confirmação (simulado).'
+                };
+                alert(messages[currentLang]);
+                modal.classList.add('oculto');
+                e.target.reset();
+            });
         });
-      });
+        
+        
+        
+        
+        document.querySelectorAll('.rating').forEach(r => {
+            const stars = r.querySelectorAll('.star');
+            const sitioCard = r.closest('.sitio');
 
-      // Modal reserva
-      const modal = document.getElementById('modal');
-      const modalTitle = document.getElementById('modal-title');
-      document.querySelectorAll('.btn.reserva').forEach(b=>{
-        b.addEventListener('click', e=>{
-          modal.classList.remove('oculto');
-          modalTitle.textContent = 'Reservar: ' + (e.target.dataset.title || 'Servicio');
+            const renderStars = (rating) => {
+                stars.forEach((star, i) => {
+                    star.style.color = i < rating ? 'gold' : '#ccc';
+                });
+            };
+
+            let currentRating = parseInt(sitioCard.dataset.initialRating || r.dataset.rating);
+            renderStars(currentRating);
+
+            stars.forEach((s, idx) => {
+                s.addEventListener('click', () => {
+                    const newRating = idx + 1;
+                    r.dataset.rating = newRating;
+                    renderStars(newRating);
+                    
+                    console.log(`Calificación de ${sitioCard.dataset.name}: ${newRating} estrellas`);
+                });
+            });
         });
-      });
-      document.getElementById('cerrar').addEventListener('click', ()=> modal.classList.add('oculto'));
 
-      document.getElementById('form-reserva').addEventListener('submit', e=>{
-        e.preventDefault();
-        // Aquí podrías enviar la info a un servidor. Ahora sólo mostramos un mensaje.
-        alert('Reserva enviada. Verifica correo para confirmación (simulado).');
-        modal.classList.add('oculto');
-        e.target.reset();
-      });
+       
+        document.querySelectorAll('.guardar-comentario').forEach(btn => {
+            btn.addEventListener('click', e => {
+                const box = e.target.closest('.comentarios');
+                const textarea = box.querySelector('.comentario-text');
+                const txt = textarea.value;
 
-    });
+                if(!txt.trim()) return;
+
+                const li = document.createElement('li');
+                const userSpan = document.createElement('strong');
+                userSpan.textContent = `${currentUser}:`;
+                
+                li.appendChild(userSpan);
+                li.append(txt);
+
+                box.querySelector('.lista-comentarios').prepend(li);
+                textarea.value = '';
+            });
+        });
+    </script>
+</body>
+</html>
   </script>
 </body>
 </html>
+
